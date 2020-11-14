@@ -32,7 +32,9 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexWrap: 'wrap',
     [theme.breakpoints.down('md')]: {
-      width: '100%'
+      width: '100%',
+      margin: '0',
+      padding: '0'
     },
   },
   seccionesNav: {
