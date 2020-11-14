@@ -48,6 +48,9 @@ const useStyles = makeStyles((theme) => ({
     height: '50px',
     marginBottom: '50px'
   },
+  titulosSecciones:{
+    fontSize: '9vw'
+  },
   aboutUs: {
     minHeight: '100vh',
     display: 'flex',
@@ -59,9 +62,9 @@ const useStyles = makeStyles((theme) => ({
   },
   aboutTexto: {
     justifySelf: 'center',
-    fontSize: '26px',
-    marginTop: '40px',
-    width: '90%',
+    fontSize: '20px',
+    marginTop: '20px',
+    width: '100%',
     fontWeight:'100'
   },
   boton: {
@@ -103,8 +106,8 @@ instalaciones: {
 },
 instaTexto: {
   justifySelf: 'center',
-  fontSize: '26px',
-  marginTop: '40px',
+  fontSize: '20px',
+  marginTop: '20px',
   fontWeight:'100'
 },
 instaBoton: {
@@ -147,12 +150,15 @@ contacto: {
   paddingLeft: '4%',
   paddingTop: '80px',
   paddingRight: '4%',
-  backgroundColor:'#A4DEED'
+  backgroundColor:'#A4DEED',
+  [theme.breakpoints.down('md')]: {
+    minHeight: '60vh'
+  },
 },
 contactTexto: {
   justifySelf: 'left',
-  fontSize: '26px',
-  marginTop: '40px',
+  fontSize: '20px',
+  marginTop: '20px',
   width: '90%',
   fontWeight:'100'
 },
@@ -176,7 +182,7 @@ export default function CenteredGrid() {
             <Typography className={classes.title} align='left'>lectus</Typography>
         </Grid>
         <Grid item xs={12} className={classes.aboutUs}>
-          <Typography variant='h2'>semper risus in hendrerit gravida rutrum quisque non tellus orci</Typography>
+          <Typography variant='h2' className={classes.titulosSecciones}>semper risus in hendrerit gravida</Typography>
           <Typography variant='body1' className={classes.aboutTexto}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aenean vel elit scelerisque mauris pellentesque pulvinar. Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue eget. Vulputate eu scelerisque felis imperdiet proin. Molestie a iaculis at erat pellentesque. Ultrices tincidunt arcu non sodales. Diam volutpat commodo sed egestas egestas fringilla. Venenatis tellus in metus vulputate eu scelerisque felis imperdiet. Purus gravida quis blandit turpis cursus in hac. Quis risus sed vulputate odio.</Typography>
           <Button  size='small' className={classes.boton}>Más Información</Button>
         </Grid>
@@ -184,7 +190,7 @@ export default function CenteredGrid() {
           <ButtonBases />
         </Grid>
         <Grid item xs={12} className={classes.instalaciones}>
-        <Typography variant='h2'>diam quis enim lobortis scelerisque fermentum dui faucibus</Typography>
+        <Typography variant='h2' className={classes.titulosSecciones}>diam quis enim lobortis</Typography>
           <Typography variant='body1' className={classes.instaTexto}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aenean vel elit scelerisque mauris pellentesque pulvinar. Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue eget. Vulputate eu scelerisque felis imperdiet proin. Molestie a iaculis at erat pellentesque. Ultrices tincidunt arcu non sodales. Diam volutpat commodo sed egestas egestas fringilla. Venenatis tellus in metus vulputate eu scelerisque felis imperdiet. Purus gravida quis blandit turpis cursus in hac. Quis risus sed vulputate odio.</Typography>
           <Button variant='outlined' size='small' className={classes.instaBoton} align='right'>Más Información</Button>
         </Grid>
@@ -216,7 +222,7 @@ export default function CenteredGrid() {
             <img
               className="d-block w-100"
               src="https://images.pexels.com/photos/7294/garden.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-              height={550}
+              height={500}
             />
             <Carousel.Caption>
               <h3>aenean euismod elementum nisi</h3>
@@ -227,7 +233,7 @@ export default function CenteredGrid() {
             <img
               className="d-block w-100"
               src="https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-              height={550}
+              height={500}
             />
             <Carousel.Caption>
               <h3>cras pulvinar mattis</h3>
@@ -238,7 +244,7 @@ export default function CenteredGrid() {
             <img
               className="d-block w-100"
               src="https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-              height={550}
+              height={500}
             />
             <Carousel.Caption>
               <h3>congue quisque egestas diam in</h3>
@@ -249,7 +255,7 @@ export default function CenteredGrid() {
         <Button className={classes.galBoton} align='right'>Descubrí más</Button>
         </Grid>
         <Grid item xs={12} className={classes.contacto}>
-          <Typography variant='h2'>semper risus in hendrerit gravida rutrum quisque non tellus orci</Typography>
+          <Typography variant='h2' className={classes.titulosSecciones}>semper risus in hendrerit</Typography>
           <Typography variant='body1' className={classes.contactTexto}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aenean vel elit scelerisque mauris pellentesque pulvinar. Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue eget.</Typography>
           <FormDialog />
         </Grid>

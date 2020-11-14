@@ -23,6 +23,15 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: 'white',
     color: 'black',
     marginBottom: '0',
+    [theme.breakpoints.down('md')]: {
+      //
+    },
+  },
+  seccionesNav: {
+    [theme.breakpoints.down('md')]: {
+      display: 'flex',
+      flexDirection:'column'
+    },
   },
   botones: {
     fontSize: '14px'
@@ -37,6 +46,10 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     marginLeft: '12px',
+    [theme.breakpoints.down('md')]: {
+      flexDirection: 'row',
+      marginBottom:'6px'
+    },
   },
   redes: {
     color: 'black'
@@ -61,7 +74,7 @@ export default function ButtonAppBar() {
   return (
     <div className={classes.root}>
       <AppBar position="fixed" color='secondary' className={classes.navBar} >
-        <Toolbar>
+        <Toolbar className={classes.seccionesNav}>
           <Typography variant="h6" className={classes.title}>
             LOGO
           </Typography>
