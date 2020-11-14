@@ -29,7 +29,6 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'flex-end',
     paddingLeft: '4%',
     paddingTop: '50px',
-    width: '100%',
     marginRight: '0'
   },
   title: {
