@@ -12,8 +12,7 @@ import Fade from 'react-bootstrap/Fade';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    margin: '0',
-    width: 'auto'
+    margin: '0'
   },
   paper: {
     padding: theme.spacing(2),
@@ -170,6 +169,12 @@ footer: {
   color: 'white',
   textAlign: 'center',
   lineHeight: '60px'
+},
+mainContenedor: {
+  width: '100%',
+  [theme.breakpoints.down('md')]: {
+    widht:'fit-content'
+  },
 }
 }));
 
@@ -178,7 +183,7 @@ export default function CenteredGrid() {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={0}>
+      <Grid container spacing={0} className={classes.mainContenedor}>
         <Grid item xs={12} className={classes.hero}>
             <Typography className={classes.title} align='left'>pretium</Typography>
             <Typography className={classes.title} align='left'>lectus</Typography>
