@@ -12,8 +12,8 @@ import Fade from 'react-bootstrap/Fade';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    width: 'fit-content',
-    margin: '0'
+    margin: '0',
+    width: 'auto'
   },
   paper: {
     padding: theme.spacing(2),
@@ -202,7 +202,7 @@ export default function CenteredGrid() {
             <img
               className="d-block w-100"
               src="https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-              height={550}
+              height={500}
             />
             <Carousel.Caption>
               <h3>bibendum at varius</h3>
@@ -213,7 +213,7 @@ export default function CenteredGrid() {
             <img
               className="d-block w-100"
               src="https://images.pexels.com/photos/1910472/pexels-photo-1910472.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-              height={550}
+              height={500}
             />
             <Carousel.Caption>
               <h3>fames ac</h3>
