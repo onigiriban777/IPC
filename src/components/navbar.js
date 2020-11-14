@@ -34,7 +34,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   botones: {
-    fontSize: '14px'
+    fontSize: '14px',
+    width: '100%'
   },
   contacto: {
     borderRadius: '0',
