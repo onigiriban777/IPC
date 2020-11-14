@@ -10,19 +10,27 @@ import { Link } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
+    width: '100%'
   },
   menuButton: {
     marginRight: theme.spacing(2),
+    width: '100%'
   },
   title: {
     flexGrow: 1,
-    marginRight: '12px'
+    marginRight: '12px',
+    [theme.breakpoints.down('md')]: {
+      marginRight: '0'
+    },
   },
   navBar: {
     backgroundColor: 'white',
     color: 'black',
     marginBottom: '0',
+    width: '100%',
+    display: 'flex',
+    flexWrap: 'wrap',
     [theme.breakpoints.down('md')]: {
       //
     },
@@ -35,7 +43,10 @@ const useStyles = makeStyles((theme) => ({
   },
   botones: {
     fontSize: '14px',
-    width: '100%'
+    width: '100%',
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center'
   },
   contacto: {
     borderRadius: '0',
@@ -49,7 +60,8 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '12px',
     [theme.breakpoints.down('md')]: {
       flexDirection: 'row',
-      marginBottom:'6px'
+      marginBottom:'6px',
+      marginLeft: '0'
     },
   },
   redes: {
@@ -62,10 +74,18 @@ const useStyles = makeStyles((theme) => ({
     padding: '12px',
     marginLeft: '4px',
     border: 'none',
+    [theme.breakpoints.down('md')]: {
+      display: 'none'
+    },
     '&:hover': {
       backgroundColor: 'black',
       color: '#FFF'
   }
+  },
+  hide: {
+    [theme.breakpoints.down('md')]: {
+      display: 'none'
+    },
   }
 }));
 
@@ -80,11 +100,11 @@ export default function ButtonAppBar() {
             LOGO
           </Typography>
           <div className={classes.botones}>
-          <Button color="inherit" size='small'>Quienes somos</Button>
+          <Button color="inherit" size='small' className={classes.hide}>Quienes somos</Button>
           <Button color="inherit" size='small'>Servicios</Button>
           <Button color="inherit" size='small'>Tratamientos</Button>
           <Button color="inherit" size='small'>Instalaciones</Button>
-          <Button className={classes.button}>CONTACTO</Button>
+          <Button className={classes.button} >CONTACTO</Button>
           </div>
           <div className={classes.socialMenu}>
           <Link href='#' className={classes.redes} color='primary'><FacebookIcon /></Link>
